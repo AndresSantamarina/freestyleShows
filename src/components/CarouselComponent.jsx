@@ -12,19 +12,22 @@ const CarouselComponent = () => {
   };
   return (
     <div className="d-flex justify-content-center m-5">
-    <Carousel activeIndex={index} onSelect={handleSelect} className=" carousel">
-      <Carousel.Item>
-        <img src={img1} alt="freestyle" className="imgCarousel" />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img src={img2} alt="freestyle" className="imgCarousel" />
-      </Carousel.Item>
-      <Carousel.Item>
-        <img src={img3} alt="Red Bull" className="imgCarousel" />
-      </Carousel.Item>
-    </Carousel>
+      <Carousel
+        activeIndex={index}
+        onSelect={handleSelect}
+        className=" carousel"
+      >
+        <Carousel.Item>
+          <img src={img1} alt="freestyle" className="imgCarousel" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img src={img2} alt="freestyle" className="imgCarousel" />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img src={img3} alt="Red Bull" className="imgCarousel" />
+        </Carousel.Item>
+      </Carousel>
     </div>
-
   );
 };
 

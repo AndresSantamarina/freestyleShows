@@ -10,7 +10,6 @@ const SectionVideos = () => {
   let player = null;
 
   useEffect(() => {
-    // Configuración del reproductor de video
     player = videojs(videoRef.current, {
       autoplay: false,
       controls: true,
@@ -27,16 +26,14 @@ const SectionVideos = () => {
     });
 
     return () => {
-      // Limpieza al desmontar el componente
       if (player !== null) {
-        player.dispose(); // Liberar recursos del reproductor
+        player.dispose();
       }
     };
   }, []);
 
   return (
     <motion.div
-      // style={{ background: "black" }}
       initial={{ opacity: 0, y: 300 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
@@ -59,9 +56,6 @@ const SectionVideos = () => {
         <Row>
           <Col xs={12} className="d-flex justify-content-center my-5">
             {" "}
-            {/* <video width="300" controls>
-            <source src={video2} type="video/mp4" />
-          </video> */}
             <div data-vjs-player>
               <video ref={videoRef} className="video-js" />
             </div>

@@ -8,9 +8,9 @@ const Inicio = () => {
   return (
     <div className="mainSection">
       <Banner />
-      <Welcome/>
-      <About/>
-      <SectionVideos/>
+      <Welcome />
+      <About />
+      <SectionVideos />
       <Footer />
     </div>
   );

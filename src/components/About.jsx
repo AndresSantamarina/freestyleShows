@@ -6,7 +6,6 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import "videojs-youtube";
 
-
 const About = () => {
   const videoRef1 = useRef(null);
   const videoRef2 = useRef(null);
@@ -16,51 +15,54 @@ const About = () => {
     const player1 = videojs(videoRef1.current, {
       controls: true,
       autoplay: false,
-      preload: 'auto',
-      techOrder: ['youtube'],
-      sources: [{
-        src: `https://www.youtube.com/watch?v=XZuC_KSM5Cw`,
-        type: 'video/youtube'
-      }]
+      preload: "auto",
+      techOrder: ["youtube"],
+      sources: [
+        {
+          src: `https://www.youtube.com/watch?v=XZuC_KSM5Cw`,
+          type: "video/youtube",
+        },
+      ],
     });
 
-    // Video 2: showFutsal
     const player2 = videojs(videoRef2.current, {
-        controls: true,
-        autoplay: false,
-        preload: 'auto',
-        techOrder: ['youtube'],
-        sources: [{
+      controls: true,
+      autoplay: false,
+      preload: "auto",
+      techOrder: ["youtube"],
+      sources: [
+        {
           src: `https://www.youtube.com/watch?v=MSVsxJ9c1Oo`,
-          type: 'video/youtube'
-        }]
+          type: "video/youtube",
+        },
+      ],
     });
 
-    // Video 3: showsGrales
     const player3 = videojs(videoRef3.current, {
-        controls: true,
-        autoplay: false,
-        preload: 'auto',
-        techOrder: ['youtube'],
-        sources: [{
+      controls: true,
+      autoplay: false,
+      preload: "auto",
+      techOrder: ["youtube"],
+      sources: [
+        {
           src: `https://www.youtube.com/watch?v=f9uBfkxgkhA`,
-          type: 'video/youtube'
-        }]
+          type: "video/youtube",
+        },
+      ],
     });
 
-    // Limpieza al desmontar el componente
     return () => {
       if (player1) {
-        player1.dispose(); // Liberar recursos del reproductor 1
+        player1.dispose();
       }
       if (player2) {
-        player2.dispose(); // Liberar recursos del reproductor 2
+        player2.dispose();
       }
       if (player3) {
-        player3.dispose(); // Liberar recursos del reproductor 3
+        player3.dispose();
       }
     };
-  }, []); // Se ejecuta solo una vez al montar el componente
+  }, []);
 
   return (
     <>
@@ -83,7 +85,6 @@ const About = () => {
         </motion.div>
 
         <motion.div
-          // style={{ background: "black" }}
           initial={{ opacity: 0, y: 300 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}

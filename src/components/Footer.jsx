@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import React from "react";
 
 const Footer = () => {
   const telefono = `https://api.whatsapp.com/send/?phone=%2B3865608565&text&type=phone_number&app_absent=0`;
