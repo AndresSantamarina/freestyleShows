@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&display=swap");
+
+body {
+  background: rgb(243, 237, 255);
+  background: radial-gradient(
+    circle,
+    rgba(243, 237, 255, 1) 79%,
+    rgba(181, 121, 223, 1) 100%
+  );
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+}
+
+.mainSection {
+  flex-grow: 1;
+}
+
+footer {
+  background-color: #270446;
+}
+
+footer a {
+  color: rgb(89, 22, 176);
+}
+
+footer a:hover {
+  color: #a260bf;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Playwrite AU VIC", cursive;
+}
+
+.banner-container {
+  position: relative; /* Asegura que los elementos dentro se posicionen relativos a este contenedor */
+  height: 500px; /* Altura del banner */
+}
+
+.background-img {
+  width: 100%; /* Asegura que la imagen cubra todo el contenedor */
+  height: 100%; /* Asegura que la imagen cubra todo el contenedor */
+  object-fit: cover; /* Ajusta la imagen para cubrir todo el área */
+  position: absolute; /* Posiciona la imagen absolutamente dentro del contenedor */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Coloca la imagen detrás del contenido */
+  filter: brightness(0.5);
+}
+
+.overlay {
+  position: absolute; /* Posiciona el contenido encima de la imagen */
+  top: 50%; /* Ajusta la posición verticalmente */
+  left: 50%; /* Ajusta la posición horizontalmente */
+  transform: translate(-50%, -50%); /* Centra el contenido */
+  text-align: center; /* Centra el texto horizontalmente */
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  z-index: 1; /* Asegura que esté delante de la imagen de fondo */
+}
+
+.overlay h1,
+.overlay h2 {
+  color: white; /* Color del texto */
+  /* font-size: 3rem;  */
+}
+
+.overlay a {
+  color: white;
+}
+
+.overlay a:hover {
+  color: rgb(89, 22, 176);
+}
+
+.presentacion {
+  font-size: x-large;
+}
+
+.video-js {
+  width: 500px;
+  height: 500px;
+}
+
+.tituloBienvenida {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(39, 4, 70, 1) 35%
+  );
+}
+
+.iconAbout {
+  color: #8b3ece;
+}
+
+.spanColor {
+  color: #8b3ece;
+}
+
+.acerca {
+  background: rgb(243, 237, 255);
+  background: radial-gradient(
+    circle,
+    rgba(243, 237, 255, 1) 79%,
+    rgba(181, 121, 223, 1) 100%
+  );
+}
+
+.tituloAbout {
+  color: #8b3ece;
+}
+
+.carousel {
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+  width: 50%;
+  height: 50%;
+}
+
+.imgCarousel {
+  object-fit: cover;
+  height: 900px;
+  width: 100%;
+  border-radius: 10px; /* Redondea los bordes de las imágenes */
+}
+
+@media (max-width: 991.98px) {
+  .carousel {
+    width: 400px;
+    height: 350px;
+  }
+  .imgCarousel {
+    object-fit: cover;
+    height: 400px;
+    width: 350px;
+    border-radius: 10px;
+  }
+}
+
+.textoShow {
+  border-radius: 20px;
+  /* background-color: #a260bf; */
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(39, 4, 70, 1) 35%
+  );
+}
+
+.spanTexto {
+  /* color: rgb(80, 44, 111); */
+  color: rgb(190, 120, 213);
+ 
+  
+}
